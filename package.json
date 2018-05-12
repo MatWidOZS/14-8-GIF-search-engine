@@ -20,7 +20,8 @@
         "watch:sassprefixer": "onchange -d 100 sass/ -- npm-run-all sassprefixer:*",
         "sassprefixer:sass": "node-sass --output-style expanded --source-map true -o css/ sass/",
         "sassprefixer:autoprefixer": "autoprefixer-cli css/style.css",
-        "watch:browsersync": "browser-sync start --server --files css/*.css *.html js/*.js"
+        "watch:browsersync": "browser-sync start --server --files css/*.css *.html js/*.js",
+        "start": "http-server"
     },
     "keywords": [],
     "author": "",
@@ -29,6 +30,7 @@
         "autoprefixer-cli": "^1.0.0",
         "browser-sync": "^2.23.6",
         "globstar": "^1.0.0",
+        "http-server": "^0.11.1",
         "jshint": "^2.9.5",
         "mkdirp": "^0.5.1",
         "node-sass": "^4.7.2",
