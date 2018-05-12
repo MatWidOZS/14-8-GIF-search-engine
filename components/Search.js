@@ -8,7 +8,7 @@ Search = React.createClass({
 	handleChange: function(event) {
 		var searchingText = event.target.value;
 		this.setState({
-			searchingText: searchingText;
+			searchingText: searchingText
 		});
 
 		if (searchingText.length > 2) {
@@ -30,7 +30,7 @@ Search = React.createClass({
 		};
 
 		return <input
-					type:"text"
+					type="text"
 					onChange={this.handleChange}
 					onKeyUp={this.handleKeyUp}
 					placeholder="Enter the search phrase"
