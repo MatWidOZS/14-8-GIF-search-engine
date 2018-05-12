@@ -1,4 +1,12 @@
 App = React.createClass({
+	setInitialState() {
+		return {
+			loading: false,
+			searchingText: '',
+			gif: {}
+		}
+	},
+
 	render: function() {
 
 		var = styles = {
@@ -12,7 +20,11 @@ App = React.createClass({
 				<h1>GIF search engine!</h1>
 				<p>Find GIF on <a href='http://giphy.com'> giphy</a> Press enter to donwload another GIF.</p>
 				<Search />
-				<Gif />
+				<Gif 
+					loading={this.state.loading}
+					url={this.state.gif.url}
+					sourceUrl={this.state.gif.sourceUrl}
+				/>
 			</div>
 		);
 	}
