@@ -39,7 +39,7 @@ App = React.createClass({
 
 	render: function() {
 
-		var = styles = {
+		var = styles {
 			margin: '0 auto',
 			textAlign: 'center',
 			width: '90%'
