@@ -5,6 +5,23 @@ Search = React.createClass({
 		};
 	},
 
+	handleCHange: function(event) {
+		var searchingText = event.target.value;
+		this.setState({
+			searchingText: searchingText;
+		});
+
+		if (searchingText.length > 2) {
+			this.props.onSearch(searchingText);
+		}
+	},
+
+	handleKeyUp: function(event) {
+		if (event.keyCode === 13) {
+			this.props.onSearch(this.state.searchingText)
+		}
+	},
+
 	render: function() {
 		var styles = {
 			fontSize: '1.5em',
@@ -15,16 +32,10 @@ Search = React.createClass({
 		return <input
 					type:"text"
 					onChange={this.handleChange}
+					onKeyUp={this.handleKeyUp}
 					placeholder="Enter the search phrase"
 					style={styles}
 					value={this.state.searchTerm}
 				/>
-	}
-
-	handleCHange: function(event) {
-		var searchingText = event.target.value;
-		this.setState({
-			searchingText: searchingText;
-		});
 	}
 });
