@@ -7,7 +7,7 @@ var styles = {
 
 Gif = React.createClass({
 	getURL: function() {
-		return this.props.sourceURL || GIPHY_LOADING_URL;
+		return this.props.sourceUrl || GIPHY_LOADING_URL;
 	},
 
 	render: function() {
@@ -15,7 +15,7 @@ Gif = React.createClass({
 
 		return (
 			<div style={styles}>
-				<a href={this.getURL()} title='view this on giphy' target='new'>
+				<a href={this.getUrl()} title='view this on giphy' target='new'>
 					<img id='gif' src={url} style={{ width: '100%', maxWidth: '350px'}}/>
 				</a>
 			</div>
